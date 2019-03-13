@@ -1,7 +1,6 @@
-##Real-time Traffic Cones Detection For Automatic Racing
+# Real-time Traffic Cones Detection For Automatic Racing
 
-###1.Dataset Preparation
-
+## 1.Dataset Preparation
 First I refered datasets from [Apollo](apolloscape.auto), [BDD100K](https://medium.com/@karol_majek/bdd100k-dataset-25e83e09ebf8), [SUN](http://groups.csail.mit.edu/vision/SUN/scenes/pages/t/toll_plaza/index.html), but they failed to meet the demands in quantity for YOLO training.
 
 Finally I downloaded [this dataset](https://www.dropbox.com/s/fag8b45ijv14noy/cone_dataset.tar.gz?dl=0), with about 260 photos of traffic cones, combined with photos taken by Xiaomi. Since annotation in this dataset is incomplete, I labeled them manually using the tool provided in [labelImg](https://github.com/tzutalin/labelImg).
@@ -14,9 +13,7 @@ Dataset now available at my [jbox](https://jbox.sjtu.edu.cn/l/UHk231), in PASCAL
 <font color='DarkGray'>example of label</font>
 </center>
 
--
-###2.Training YOLOv3
-
+## 2.Training YOLOv3
 At first I want to detect cones in simple graphic method, that is, using Hough Transform to find convex cones in the image, and then identifying them based on color, shape or so.
 
 <center>

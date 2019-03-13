@@ -26,5 +26,12 @@ However, considering the complex background on lane while real-time driving, thi
 
 But SVM failed in speed. YOLO(You Only Look Once) network performs well both in spped and accuracy(reaching 70 fps), so finally I choose [YOLOv3](https://github.com/eriklindernoren/PyTorch-YOLOv3). (Before this choice I considered YOLOv2, but failed in compiling CUDA env.)
 
-Now still training..
+After 500 epochs of training, total loss has been reduced to a fairly low level (min=0.011), with precision up to 0.887. However in the detection valid task, nothing can be detected. I've opened an [issue](https://github.com/eriklindernoren/PyTorch-YOLOv3/issues/126). 
+
+What's more, exploding gradient problem happened, as shown below:
+
+![text](imgs/5.png)
+![text](imgs/6.png)
+
+Now still debugging..
 

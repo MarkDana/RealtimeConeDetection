@@ -33,5 +33,17 @@ What's more, exploding gradient problem happened, as shown below:
 ![text](imgs/5.png)
 ![text](imgs/6.png)
 
-Now still debugging..
+After fixing 2 bugs mentioned in [issue127](https://github.com/eriklindernoren/PyTorch-YOLOv3/issues/127), now pretty good results as follows:
+
+![text](imgs/7.png)
+![text](imgs/8.png)
+![text](imgs/9.png)
+
+
+## 3.TODO next
++ Since the traffic cone used in our race is adhered with white reflective tape, top part of the cone may be mismatched, like shown below:![text](imgs/10.png) 
+So if a rectangle inside another one, eliminate the inner one.
++ Color decision. Now I consider sampling in the detected area.
++ Speed test.
++ Try some other networks, tiny-yolov3 or yolov3 implemented in PyTorch1.0, etc.
 

@@ -43,7 +43,8 @@ As for speed, testing single images(not video stream) **on 1080Ti is about 60 fp
 
 ![text](imgs/11.jpg)![text](imgs/12.jpg)![text](imgs/13.jpg)
 
-In addition, the model just detects traffic cone, regardless of its color. So for each cone detected, we extract the half bottom of the bounding box's perpendicular and calculate its average RGB value, and decide which color the cone is(red, green, blue, yellow, dontknow). It only works well for standing cones, inclination or white reflective tape may affect accuracy. And mapping from sampling RGB to color name also depends on color and shape of cones in actual games. Counter-example like:![text](imgs/14.jpg)
+In addition, the model just detects traffic cone, regardless of its color. So for each cone detected, we extract the half bottom of the bounding box's perpendicular and calculate its average RGB value, and decide which color the cone is(red, green, blue, yellow, dontknow). It only works well for standing cones, inclination or white reflective tape may affect accuracy. And mapping from sampling RGB to color name also depends on color and shape of cones in actual games. Counter-example like:
+![text](imgs/14.jpg)
 
 
 ## 4.Have a Try!

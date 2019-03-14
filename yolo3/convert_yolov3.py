@@ -2,7 +2,7 @@ import xml.etree.ElementTree as ET
 import os,shutil
 
 data_path='/Users/markdana/Desktop/VOC2007'
-coco_path='/Users/markdana/Downloads/PyTorch-YOLOv3-master/data/coco'
+coco_path='/Users/markdana/Downloads/yolo3/data/coco'
 
 def getAnnotation(index):
     filename = os.path.join(data_path, 'Annotations', index + '.xml')

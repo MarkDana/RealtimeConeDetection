@@ -33,17 +33,27 @@ What's more, exploding gradient problem happened, as shown below:
 ![text](imgs/5.png)
 ![text](imgs/6.png)
 
-After fixing 2 bugs mentioned in [issue127](https://github.com/eriklindernoren/PyTorch-YOLOv3/issues/127), now pretty good results as follows:
+After fixing 2 bugs mentioned in [issue127](https://github.com/eriklindernoren/PyTorch-YOLOv3/issues/127), now pretty good results.
 
-![text](imgs/7.png)
-![text](imgs/8.png)
-![text](imgs/9.png)
+## 3.Performance
+![text](imgs/10.png)
+As is shown above, after transforming to another impletation and modifying parameters, the exploding gradient problem has been solved. In this single-class network, total loss can be as low as 0.03, with **mAP reaching 98%, recall 98%, precision 99%**.
 
+As for speed, testing single images(not video stream) **on 1080Ti is about 60 fps**. Haven't tested on tx2 yet. To accelerate, consider tiny-yolov3 or turn down the input size.
 
-## 3.TODO next
-+ Since the traffic cone used in our race is adhered with white reflective tape, top part of the cone may be mismatched, like shown below:![text](imgs/10.png) 
-So if a rectangle inside another one, eliminate the inner one.
-+ Color decision. Now I consider sampling in the detected area.
-+ Speed test.
-+ Try some other networks, tiny-yolov3 or yolov3 implemented in PyTorch1.0, etc.
+The model just detects traffic cone, regardless of its color. So for each cone detected, we extract the half bottom of the bounding box's perpendicular and calculate its average RGB value, and decide which color the cone is(red, green, blue, yellow, dontknow). It only works well for standing cones, inclination or white reflective tape may affect accuracy. And mapping from sampling RGB to color name also depends on color and shape of cones in actual games. 
 
+![text](imgs/11.jpg)![text](imgs/12.jpg)![text](imgs/13.jpg)
+
+## 4.Have a Try!
++ Test: 
+	- Download weights file [best.pt](https://jbox.sjtu.edu.cn/l/wJoO64) and put it in `yolo3/weights/`. 
+	- Put the images you want to detect in `yolo3/data/samples/`.
+	- Run `detect.py`.
+
++ Train: 
+	- Edit your own dirs in `convert_yolov3.py` and run it.
+	- Run `train.py`.
+
++ Improve color decision:
+	- edit `utils/utils.py/plot_one_box()`.

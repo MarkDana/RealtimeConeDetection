@@ -1,4 +1,4 @@
-classes= 1
+classes=1
 train=data/coco/trainval.txt
 valid=data/coco/trainval.txt
 names=data/coco.names

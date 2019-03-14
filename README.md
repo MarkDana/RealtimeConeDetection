@@ -47,8 +47,8 @@ The model just detects traffic cone, regardless of its color. So for each cone d
 
 ## 4.Have a Try!
 + Test: 
-	- Download weights file [best.pt](https://jbox.sjtu.edu.cn/l/wJoO64) and put it in `yolo3/weights/`. 
-	- Put the images you want to detect in `yolo3/data/samples/`.
+	- Download weights file [best.pt](https://jbox.sjtu.edu.cn/l/wJoO64) and put it in `weights/`. 
+	- Put the images you want to detect in `data/samples/`.
 	- Run `detect.py`.
 
 + Train: 

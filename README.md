@@ -49,7 +49,7 @@ In addition, the model just detects traffic cone, regardless of its color. So fo
 
 ## 4.Have a Try!
 + Test: 
-	- Download weights file [best.pt](https://jbox.sjtu.edu.cn/l/wJoO64) and put it in `weights/`. 
+	- Download weights file [best.pt](https://drive.google.com/file/d/1cTnrWIjWcGjLzz44P6cCUxqh8teCaoFr/view?usp=sharing) and put it in `weights/`. 
 	- Put the images you want to detect in `data/samples/`.
 	- Run `detect.py`.
 

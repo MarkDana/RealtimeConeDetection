@@ -5,7 +5,7 @@ First I refered datasets from [Apollo](apolloscape.auto), [BDD100K](https://medi
 
 Finally I downloaded [this dataset](https://www.dropbox.com/s/fag8b45ijv14noy/cone_dataset.tar.gz?dl=0), with about 260 photos of traffic cones, combined with photos taken by Xiaomi. Since annotation in this dataset is incomplete, I labeled them manually using the tool provided in [labelImg](https://github.com/tzutalin/labelImg).
 
-Dataset now available at my [jbox](https://jbox.sjtu.edu.cn/l/UHk231), in PASCAL VOC format, and YOLOv3 format.
+Dataset now available at [here (updated)](https://drive.google.com/file/d/1YiIPC1m8EDJyj5R7FV5hyRAjHOe9_Bmd/view?usp=sharing), in PASCAL VOC format, and YOLOv3 format.
 
 <center>
 <img src="imgs/4.png" width="50%" />
